@@ -14,7 +14,12 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    backgroundImage : {  // 當圖片格式為 png 時，所要使用的背景圖片 ( public 資料夾中 )
+      'png-pattern' : "url('/empty-bg.jpg')"
+    }
   },
-  plugins: [],
+  plugins: [
+              require( "@tailwindcss/typography" ) // 額外下載套件，for TipTap 編輯器
+  ],
 }
 export default config
