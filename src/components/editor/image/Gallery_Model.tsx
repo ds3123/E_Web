@@ -1,10 +1,9 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { ChangeEventHandler , FC , useState , useCallback } from 'react' 
-import Modal_Container from "../../Common/Modal_Container"
-import { ModalProps } from "../../Common/Modal_Container"
-import Gallery from './Gallery'
+import Modal_Container from "@/components/common/Modal_Container"
+import { ModalProps } from "@/components/common/Modal_Container"
+import Gallery from '@/components/editor/image/Gallery'
 import Image from 'next/image'
-import Action_Button from '../../Common/Action_Button'
+import Action_Button from '@/components/common/Action_Button'
 import { AiOutlineCloudUpload } from 'react-icons/ai'
 
 

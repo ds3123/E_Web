@@ -1,7 +1,7 @@
 
 import { FC } from 'react' ;
 import NextImage from 'next/image'
-import Check_Mark from '../../Common/Check_Mark';
+import Check_Mark from '@/components/common/Check_Mark';
 
 
 type Props = {

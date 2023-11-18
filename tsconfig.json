@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "." ,
     "target": "es5",
     "lib": [
       "dom",
@@ -23,9 +24,11 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": [ "./src/*" ] ,
+      "@components/*" : [ "src/components/*" ] ,
+      "@common/*" : [ "src/components/common/*" ] ,
+      "@layout/*" : [ "src/components/layout/*" ] ,
+      "@editor/*" : [ "src/components/editor/*" ]
     }
   },
   "include": [
@@ -34,7 +37,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "dist/types/**/*.ts",
-    "bbb/types/**/*.ts",
     "build/types/**/*.ts"
   ],
   "exclude": [

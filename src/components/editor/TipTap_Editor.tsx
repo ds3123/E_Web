@@ -3,7 +3,7 @@
 import { FC } from 'react' 
 import { EditorContent } from '@tiptap/react'
 import TipTap_ToolBar from './TipTap_ToolBar'
-import Edit_Link from './Link/Edit_Link'
+import Edit_Link from './link/Edit_Link'
 import { useEffect_Editor } from './hooks/useEffect_Editor'
 import { useEffect_Get_EditorContent , useEffect_Set_EditorContent } from './hooks/useEffect_Get_EditorContent'
 

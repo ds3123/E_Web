@@ -1,5 +1,5 @@
 import { FC , useState , useEffect } from 'react' 
-import Gallery_Modal, { ImageSelectionResult } from './Gallery_Modal'
+import Gallery_Modal, { ImageSelectionResult } from './Gallery_Model'
 import axios from 'axios'
 import { BsImageFill } from 'react-icons/bs'
 import Editor_Button from '../Editor_Button'

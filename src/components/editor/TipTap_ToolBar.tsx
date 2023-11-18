@@ -1,6 +1,6 @@
 import { FC } from 'react' 
 import { Editor } from '@tiptap/react'
-import Dropdown_Options from '../Common/Dropdown_Options'
+import Dropdown_Options from '@/components/common/Dropdown_Options'
 import Editor_Button from './Editor_Button'
 import { focused_Editor } from './utils/editor_utils'
 import { AiFillCaretDown } from 'react-icons/ai'
@@ -15,11 +15,12 @@ import {
          BsTypeItalic ,
          BsTypeUnderline ,
         } from 'react-icons/bs'
-import Insert_Link from './Link/Insert_Link'
-import { linkOption } from './Link/Link_Form'
-import Embed_Youtube from './Youtube/Embed _Youtube'
-import { ImageSelectionResult } from './Image/Gallery_Modal'
-import Insert_Image from './Image/Insert_Image'
+import Insert_Link from './link/Insert_Link'
+import { linkOption } from './link/Link_Form'
+import Embed_Youtube from './youtube/Embed _Youtube'
+import { ImageSelectionResult } from './image/Gallery_Model'
+import Insert_Image from './image/Insert_Image'
+
 
 
 

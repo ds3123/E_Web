@@ -1,6 +1,6 @@
 
 import { FC } from 'react'
-import Gallery_Image from './Gallery_Image'
+import Gallery_Image from '@/components/editor/image/Gallery_Image'
 import { BsCardImage } from 'react-icons/bs';
 
 
@@ -15,10 +15,8 @@ type Props = {
 
 
 
-
 // # 圖片集 ( 左側 )
 const Gallery : FC< Props > = ( { images , uploading = false , selectedImage = "" , onSelect } ) => {
-
 
 
   return <div className = "flex flex-wrap" >
