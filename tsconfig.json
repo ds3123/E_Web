@@ -26,6 +26,10 @@
     "paths": {
       "@/*": [ "./src/*" ] ,
       "@components/*" : [ "src/components/*" ] ,
+      "@fp/*" : [ "src/fp/*" ] ,
+      "@hooks/*" : [ "src/hooks/*" ] ,
+      "@store/*" : [ "src/store/*" ] ,
+      "@utils/*" : [ "src/utils/*" ] ,
       "@common/*" : [ "src/components/common/*" ] ,
       "@layout/*" : [ "src/components/layout/*" ] ,
       "@editor/*" : [ "src/components/editor/*" ]
