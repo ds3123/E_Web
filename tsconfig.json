@@ -26,12 +26,18 @@
     "paths": {
       "@/*": [ "./src/*" ] ,
       "@components/*" : [ "src/components/*" ] ,
+      "@configs/*" : [ "src/configs/*" ] ,
       "@fp/*" : [ "src/fp/*" ] ,
       "@hooks/*" : [ "src/hooks/*" ] ,
       "@store/*" : [ "src/store/*" ] ,
+      "@reducer/*" : [ "src/store/reducers/*" ] ,
       "@utils/*" : [ "src/utils/*" ] ,
+      "@api/*" : [ "src/utils/api/*" ] ,
+      "@rq_hooks/*" : [ "src/utils/react-query/hooks/*" ] ,
+      "@rq_keys/*" : [ "src/utils/react-query/keys/*" ] ,
       "@common/*" : [ "src/components/common/*" ] ,
       "@layout/*" : [ "src/components/layout/*" ] ,
+      "@service/*" : [ "src/components/service/*" ] ,
       "@editor/*" : [ "src/components/editor/*" ]
     }
   },
