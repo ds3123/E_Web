@@ -9,7 +9,7 @@ export function ReactQuery_Provider( { children } : { children : React.ReactNode
 
             { children } 
 
-            <ReactQueryDevtools />
+            <ReactQueryDevtools position = "bottom-right" /> 
 
          </QueryClientProvider> ;
 

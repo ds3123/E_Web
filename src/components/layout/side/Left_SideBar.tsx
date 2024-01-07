@@ -1,12 +1,14 @@
 'use client'
 import { FC } from 'react' 
 import Link from "next/link"
-import { RxSketchLogo , RxDashboard , RxPerson } from "react-icons/rx" 
-import {  MdPets  } from "react-icons/md" 
+import { RxDashboard , RxPerson } from "react-icons/rx" 
+import { MdPets } from "react-icons/md" 
 import {  RiCustomerService2Line  } from "react-icons/ri" 
 import { FiSettings } from "react-icons/fi" 
 import { BsHouseHeartFill , BsTicketPerforated , BsFillGiftFill } from "react-icons/bs" 
 import { usePathname } from 'next/navigation' 
+import { Logout_Button  } from "@layout/index"
+import { is_Url_Admin } from "@fp/common/condition/url"
 
 
 
@@ -15,7 +17,7 @@ import { usePathname } from 'next/navigation'
 const Left_SideBar : FC = ( ) => {
 
     // 取得 _ 目前 url
-    const path   = usePathname() ; 
+    const path = usePathname() ; 
 
 
     // 是否點選樣式
@@ -27,16 +29,6 @@ const Left_SideBar : FC = ( ) => {
 
                   } ;
                  
-          
-    const is_Setting = path === '/admin/management/setting'  || 
-                       path === '/admin/management/price'    || 
-                       path === '/admin/management/product'  ||            
-                       path === '/admin/management/account'  ||            
-                       path === '/admin/management/employee' ||            
-                       path === '/admin/management/finance'  ||  
-                       path === '/admin/management/front_end' ;  
-               
-
     return <div className = "md:flex fixed w-16 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between" >
                         
                <div className = "flex flex-col items-center" >
@@ -94,12 +86,17 @@ const Left_SideBar : FC = ( ) => {
                   
                   { /* 管理 */ }
                   <Link href = '/admin/management/finance' > 
-                     <div className = { `${ is_Setting ? 'bg-purple-800 text-white' : 'bg-gray-100' } my-4 p-3 rounded-lg inline-block` } > 
+                     <div className = { `${ is_Url_Admin( path ) ? 'bg-purple-800 text-white' : 'bg-gray-100' } my-4 p-3 rounded-lg inline-block` } > 
                         <FiSettings size = { 18 } />
                      </div>
                   </Link>
 
                </div>
+
+               <div className = "mb-12" >
+                  <Logout_Button onClick = { () => alert( "登出成功" ) } />
+               </div>
+
 
            </div>  
 

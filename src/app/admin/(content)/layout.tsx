@@ -1,5 +1,6 @@
+'use client'
 import { Left_SideBar , Toggle_Panel_Right } from "@layout/index"
- 
+
 
 
 // # 系統內容整體樣板

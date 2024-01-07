@@ -2,28 +2,26 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-
 // # Redux
 import { Redux_Provider } from '@store/provider'
 
-
 // React Query
 import { ReactQuery_Provider } from "@utils/react-query/provider"
-
 
 // React Toastify
 import { ToastContainer } from 'react-toastify' ;
 import 'react-toastify/dist/ReactToastify.css' ;
 
-
 // # NextAuth
-import { SessionProvider } from "next-auth/react" ;
+import AuthSession_Provider from '@/components/common/AuthSession_Provider'
+
 
 
 
 
 
 const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
 
@@ -32,37 +30,45 @@ export const metadata: Metadata = {
 
 }
 
+
+
 export default function RootLayout({ children } : { children: React.ReactNode }) {
 
 
   return (
-           <html lang = "en" >
 
-              <body className = {inter.className} >
+            <AuthSession_Provider> 
 
-                <Redux_Provider> 
+                <html lang = "en" >
 
-                  <ToastContainer position              = "bottom-left"
-                                        autoClose       = { 5000  }
-                                        hideProgressBar = { false }
-                                        newestOnTop     = { false }
-                                        closeOnClick
-                                        rtl             = { false }
-                                        pauseOnFocusLoss
-                                        draggable
-                                        pauseOnHover />
-                  
-                    <ReactQuery_Provider> 
+                    <body className = {inter.className} >
 
-                        { children }
-    
-                    </ReactQuery_Provider>
+                          <Redux_Provider> 
 
-                </Redux_Provider>
+                            <ToastContainer position              = "bottom-left"
+                                                  autoClose       = { 5000  }
+                                                  hideProgressBar = { false }
+                                                  newestOnTop     = { false }
+                                                  closeOnClick
+                                                  rtl             = { false }
+                                                  pauseOnFocusLoss
+                                                  draggable
+                                                  pauseOnHover />
+                            
+                              <ReactQuery_Provider> 
 
-              </body>
+                                  { children }
+              
+                              </ReactQuery_Provider>
 
-           </html>
+                          </Redux_Provider>
+
+                    </body>
+
+                </html>
+
+            </AuthSession_Provider>
+          
          )
 
 }

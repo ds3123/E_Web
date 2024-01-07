@@ -3,11 +3,24 @@ import { ReactNode } from 'react';
 import { Control , Register , Path , RegisterOptions , SubmitHandler , FieldValues , UseFormTrigger } from 'react-hook-form';
 
 
+
 /*
 
   @ 各種表單欄位
 
 */
+
+
+// 新增、編輯模式
+export type EditType = undefined | "編輯" ;
+
+
+// 新增標籤
+export type CreateTab = "客戶" | "寵物" |
+                        "基礎" | "洗澡" | "美容" | 
+                        "安親" | "住宿" | 
+                        "方案" | "其他"  | "價格" | "品種" | "帳號" | "員工" | "商品" ;
+
 
 
 // 表單類型 : 新增 / 修改

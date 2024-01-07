@@ -26,6 +26,7 @@
     "paths": {
       "@/*": [ "./src/*" ] ,
       "@components/*" : [ "src/components/*" ] ,
+      "@images/*" : [ "src/images/*" ] ,
       "@configs/*" : [ "src/configs/*" ] ,
       "@fp/*" : [ "src/fp/*" ] ,
       "@hooks/*" : [ "src/hooks/*" ] ,
@@ -37,6 +38,7 @@
       "@rq_keys/*" : [ "src/utils/react-query/keys/*" ] ,
       "@common/*" : [ "src/components/common/*" ] ,
       "@layout/*" : [ "src/components/layout/*" ] ,
+      "@ui/*" : [ "src/components/ui/*" ] ,
       "@service/*" : [ "src/components/service/*" ] ,
       "@editor/*" : [ "src/components/editor/*" ]
     }
@@ -48,7 +50,7 @@
     ".next/types/**/*.ts",
     "dist/types/**/*.ts",
     "build/types/**/*.ts"
-  ],
+, "src/middleware.ts"  ],
   "exclude": [
     "node_modules"
   ]
